@@ -1,0 +1,69 @@
+// sorted array of distinct elements rotated by k positions
+Suppose a sorted array of distinct elements are rotated right by k positions
+
+(1≤k≤n-1) where k is unknown. Define and analyse algorithms that
+
+Find the k.
+
+1, 2, 3, 4,5,6
+5,6,1,2,3,4 k=2 
+k=5 2,3,4,5,6,1
+
+for(int i=0; i<n; i++){
+    if(arr[i] > arr[i+1]){
+        break;
+    }
+}
+if(i!=n) cout<<(i+1);
+
+5,6,1,2,3,4
+binary(left, right)
+left =0
+right = n-1
+if(left<=right)
+long mid = (long int)((left+right)/2)
+if(arr[left] > arr[mid])
+240+128
+
+r-l 
+r+l
+A[1]≥ A[2] and A[n-1]≤ A[n]
+
+1,2,3,5,4,2,3
+      x
+x>x+1
+x-1 and x+1
+
+5,4,2,3
+  x
+
+single linked list
+reverse
+
+     next
+1 -> 2 ->3 -> 4
+|
+head, curr
+
+temp=NULL
+curr =head // 1
+while(curr)
+    next = curr->next // 2
+    curr->next = temp // null <- 1
+    temp = curr  // 1
+    curr = next // 2
+
+
+// num power of 2
+
+//0, 10, 100, 1000
+101 & 100 = 100
+100 & 011 = 0
+1100 & 1011 = 
+while(num>0){
+    (num>>1 & 1)    
+}
+
+return ((num & (num-1) ) == 0)
+
+

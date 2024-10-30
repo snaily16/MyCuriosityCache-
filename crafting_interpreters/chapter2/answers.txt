@@ -1,0 +1,16 @@
+## A Map of the Territory
+
+1. Pick an open source implementation of a language you like. Download the source code and poke around in it. Try to find the code that implements the scanner and parser. Are they handwritten, or generated using tools like Lex and Yacc? (.l or .y files usually imply the latter.)
+
+A:   i. Python: (https://github.com/python/cpython/tree/main) Handwritten parse: lexer and tokenizer in C
+    ii. Rust: (https://github.com/rust-lang/rust/tree/master/compiler/rustc_parse) handwritten in Rust itself
+    iii. Ruby: (https://github.com/ruby/ruby/) handwritten in C:
+
+2. Just-in-time compilation tends to be the fastest way to implement dynamically typed languages, but not all of them use it. What reasons are there to not JIT?
+
+A: - JIT compilation fundamentally uses executable data, and thus poses security challenges and possible exploits.
+   - JIT causes a slight to noticeable delay in the initial execution of an application, due to the time taken to load and compile the input code. Sometimes this delay is called "startup time delay" or "warm-up time". In general, the more optimization JIT performs, the better the code it will generate, but the initial delay will also increase. A JIT compiler therefore has to make a trade-off between the compilation time and the quality of the code it hopes to generate.
+
+3. Most Lisp implementations that compile to C also contain an interpreter that lets them execute Lisp code on the fly as well. Why?
+
+A: Lisp interpreted code is slow, but easy to debug, where as compiled code is fast at runtime, fast compilation, lots of compiler checks, however sligthly more difficult to debug.
